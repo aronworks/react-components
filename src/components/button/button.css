@@ -1,0 +1,27 @@
+.btn {
+  @apply font-sans rounded-md font-medium cursor-pointer transition-transform;
+}
+
+.btn:hover {
+  @apply transform -translate-y-1;
+}
+
+.btn-primary-solid {
+  @apply bg-purple-500 text-white;
+}
+
+.btn-primary-outline {
+  @apply bg-transparent text-purple-500 border-solid border-2 border-purple-500;
+}
+
+.btn-small {
+  @apply px-2 py-2  text-sm;
+}
+
+.btn-medium {
+  @apply px-3 py-1.5 text-base;
+}
+
+.btn-large {
+  @apply px-6 py-2 text-lg;
+}
