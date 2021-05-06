@@ -1,4 +1,3 @@
-import React from "react";
 import "./button.css";
 
 const COLORS = ["primary", "secondary"];
@@ -22,7 +21,7 @@ const Button = ({
   const checkDisabled = disabled ? "btn-disabled" : "";
   const checkProcessing = processing ? "btn-processing" : "";
 
-  const className = `btn btn-${checkColor}-${checkVariant} btn-${checkSize} ${checkDisabled} ${checkProcessing}`;
+  const className = `btn btn-${checkColor}-${checkVariant} btn-${checkSize} ${checkDisabled} ${checkProcessing} `;
 
   return (
     <button className={className} onClick={onClick} type={type}>

@@ -1,0 +1,7 @@
+.snacksbar-wrapper {
+  @apply bg-gray-700 text-white px-4 py-3 fixed bottom-7 left-5 inline-block rounded flex justify-between;
+  min-width: 300px;
+  box-shadow: 2px 2px 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+/* transition ease-in-out duration-700 */
