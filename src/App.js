@@ -3,38 +3,29 @@ import Button from "./components/button/Button";
 function App() {
   return (
     <div className="m-40">
-      <Button buttonStyle="btn-primary-solid" buttonSize="btn-small">
-        Active Toggle Button
+      <Button variant="solid" size="base" color="primary" type="button">
+        Button
       </Button>
-      <br />
-      <br />
-
-      <Button buttonStyle="btn-primary-solid" buttonSize="btn-medium">
-        Active Toggle Button
+      <br></br>
+      <br></br>
+      <Button variant="outline" size="lg" color="secondary" type="button">
+        Button
       </Button>
-      <br />
-      <br />
 
-      <Button buttonStyle="btn-primary-solid" buttonSize="btn-large">
-        Active Toggle Button
+      <br></br>
+      <br></br>
+      <Button>Button</Button>
+
+      <br></br>
+      <br></br>
+      <Button size="lg" color="secondary" type="button" disabled>
+        Button
       </Button>
-      <br />
-      <br />
 
-      <Button buttonStyle="btn-primary-outline" buttonSize="btn-small">
-        Active Toggle Button
-      </Button>
-      <br />
-      <br />
-
-      <Button buttonStyle="btn-primary-outline" buttonSize="btn-medium">
-        Active Toggle Button
-      </Button>
-      <br />
-      <br />
-
-      <Button buttonStyle="btn-primary-outline" buttonSize="btn-large">
-        Active Toggle Button
+      <br></br>
+      <br></br>
+      <Button size="lg" color="secondary" type="button" processing>
+        Button
       </Button>
     </div>
   );

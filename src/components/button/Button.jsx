@@ -1,23 +1,31 @@
 import React from "react";
 import "./button.css";
 
-const STYLES = ["btn-primary-solid", "btn-primary-outline"];
+const COLORS = ["primary", "secondary"];
+const VARIANTS = ["text", "solid", "outline"];
+const SIZES = ["sm", "base", "lg"];
 
-const SIZES = ["btn-small", "btn-medium", "btn-large"];
+const Button = ({
+  children,
+  color,
+  size,
+  variant,
+  type,
+  disabled,
+  processing,
+  onClick,
+}) => {
+  const checkColor = COLORS.includes(color) ? color : COLORS[0];
+  const checkVariant = VARIANTS.includes(variant) ? variant : VARIANTS[0];
+  const checkSize = SIZES.includes(size) ? size : SIZES[1];
 
-const Button = ({ children, buttonStyle, buttonSize, type, onClick }) => {
-  const checkButtonStyle = STYLES.includes(buttonStyle)
-    ? buttonStyle
-    : STYLES[0];
+  const checkDisabled = disabled ? "btn-disabled" : "";
+  const checkProcessing = processing ? "btn-processing" : "";
 
-  const checkButtonSize = SIZES.includes(buttonSize) ? buttonSize : SIZES[2];
+  const className = `btn btn-${checkColor}-${checkVariant} btn-${checkSize} ${checkDisabled} ${checkProcessing}`;
 
   return (
-    <button
-      className={`btn ${checkButtonStyle} ${checkButtonSize}`}
-      onClick={onClick}
-      type={type}
-    >
+    <button className={className} onClick={onClick} type={type}>
       {children}
     </button>
   );
