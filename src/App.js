@@ -1,7 +1,7 @@
 import Button from "./components/button/Button";
 import Snacksbar from "./components/snacksbar/Snacksbar";
 import { useState } from "react";
-import { LeftArrow, RightArrow, Tick } from "./components/icons"
+import { LeftArrow, RightArrow, Tick } from "./components/icons";
 
 function App() {
   const [isSnacksbarOpen, setsnacksbarOpen] = useState(false);
@@ -17,7 +17,6 @@ function App() {
   };
   return (
     <div className="m-40">
-
       <button
         type="button"
         className="inline-flex items-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -43,7 +42,7 @@ function App() {
       <RightArrow height="25" width="25" fill="red" />
 
       <Tick />
-    
+
       <Button>Click me</Button>
       <Button processing={true}>Click me</Button>
       <Button disabled={false}>Click me</Button>
