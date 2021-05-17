@@ -1,8 +1,5 @@
+import PropTypes from "prop-types";
 import "./button.css";
-
-const COLORS = ["primary", "secondary"];
-const VARIANTS = ["text", "solid", "outline"];
-const SIZES = ["sm", "base", "lg"];
 
 const Button = ({
   children,
@@ -14,14 +11,10 @@ const Button = ({
   processing,
   onClick,
 }) => {
-  const checkColor = COLORS.includes(color) ? color : COLORS[0];
-  const checkVariant = VARIANTS.includes(variant) ? variant : VARIANTS[0];
-  const checkSize = SIZES.includes(size) ? size : SIZES[1];
-
   const checkDisabled = disabled ? "btn-disabled" : "";
   const checkProcessing = processing ? "btn-processing" : "";
 
-  const className = `btn btn-${checkColor}-${checkVariant} btn-${checkSize} ${checkDisabled} ${checkProcessing} `;
+  const className = `btn btn-${color}-${variant} btn-${size} ${checkDisabled} ${checkProcessing}`;
 
   return (
     <button className={className} onClick={onClick} type={type}>
@@ -29,5 +22,29 @@ const Button = ({
     </button>
   );
 };
+
+Button.propTypes = {
+  color: PropTypes.oneOf(["primary", "secondary"]),
+  size: PropTypes.oneOf(["sm", "base", "lg"]),
+  type: PropTypes.string,
+  variant: PropTypes.oneOf(["text", "solid", "outline"]),
+  disabled: PropTypes.bool,
+  processing: PropTypes.bool,
+  children: PropTypes.oneOfType(
+    [
+      PropTypes.string,
+      PropTypes.element
+    ]
+  ).isRequired,
+  onClick: PropTypes.func,
+}
+
+Button.defaultProps = {
+  type: "button",
+  color: "primary",
+  variant: "text",
+  size: "base"
+}
+
 
 export default Button;
