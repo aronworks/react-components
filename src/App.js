@@ -2,6 +2,7 @@ import Button from "./components/button/Button";
 import Snacksbar from "./components/snacksbar/Snacksbar";
 import { useState } from "react";
 import { LeftArrow, RightArrow, Tick } from "./components/icons";
+import Price from "./components/price/Price";
 
 function App() {
   const [isSnacksbarOpen, setsnacksbarOpen] = useState(false);
@@ -24,7 +25,11 @@ function App() {
         <Tick className="-ml-1 mr-2 h-5 w-5" fill="white" aria-hidden="true" />
         Publish
       </button>
-
+      <Price currency="EUR">9999</Price>
+      &nbsp;
+      <Price isStriked currency="EUR">
+        23454
+      </Price>
       <Button
         variant="outline"
         size="lg"
@@ -36,20 +41,14 @@ function App() {
           <LeftArrow className="mr-2" height="25" width="25" /> Button
         </span>
       </Button>
-
       <LeftArrow height="40" width="40" />
-
       <RightArrow height="25" width="25" fill="red" />
-
       <Tick />
-
       <Button>Click me</Button>
       <Button processing={true}>Click me</Button>
       <Button disabled={false}>Click me</Button>
-
       <Button processing>Click me</Button>
       <Button>Click me</Button>
-
       {isSnacksbarOpen && (
         <Snacksbar message="Can't send photo. Retry in 5 seconds." />
       )}
