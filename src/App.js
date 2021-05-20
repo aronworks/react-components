@@ -1,7 +1,7 @@
 import Button from "./components/button/Button";
 import Snacksbar from "./components/snacksbar/Snacksbar";
 import { useState } from "react";
-import { LeftArrow, RightArrow, Tick } from "./components/icons";
+import { ArrowLeftios, ArrowRightios, ChevronDown, ChevronLeft, ChevronRight, LeftArrow, RightArrow, Tick } from "./components/icons";
 import Price from "./components/price/Price";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
     setsnacksbarOpen(true);
 
     setTimeout(() => {
-      // setsnacksbarOpen(false);
+      // setsnacksbarOpen(false); 
     }, 5000);
   };
   return (
@@ -41,17 +41,28 @@ function App() {
           <LeftArrow className="mr-2" height="25" width="25" /> Button
         </span>
       </Button>
-      <LeftArrow height="40" width="40" />
-      <RightArrow height="25" width="25" fill="red" />
+      
       <Tick />
       <Button>Click me</Button>
       <Button processing={true}>Click me</Button>
       <Button disabled={false}>Click me</Button>
       <Button processing>Click me</Button>
       <Button>Click me</Button>
+      <LeftArrow height="25" width="25" />
+      <RightArrow height="25" width="25"  />
+
+      <ArrowLeftios  height="25" width="25" />
+      <ArrowRightios height="25" width="25" />
+
+      <ChevronLeft />
+      <ChevronRight height="25" width="25"/>
+      <ChevronDown  height="25" width="25" />
+
       {isSnacksbarOpen && (
         <Snacksbar message="Can't send photo. Retry in 5 seconds." />
       )}
+
+
     </div>
   );
 }
