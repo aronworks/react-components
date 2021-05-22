@@ -1,11 +1,11 @@
-function ChevronLeft (props){
+function ChevronUp (props){
 
   return (
     <svg xmlns="http://www.w3.org/2000/svg" height={24} width={24} {...props}>
       <path d="M0 0h24v24H0V0z" fill="none" />
-      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12l4.58-4.59z" />
+      <path d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14l-6-6z" />
     </svg>
   )
 }
-export default ChevronLeft
+export default ChevronUp
 

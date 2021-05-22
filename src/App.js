@@ -1,7 +1,8 @@
 import Button from "./components/button/Button";
 import Snacksbar from "./components/snacksbar/Snacksbar";
 import { useState } from "react";
-import { ArrowLeftios, ArrowRightios, ChevronDown, ChevronLeft, ChevronRight, LeftArrow, RightArrow, Tick } from "./components/icons";
+import { ArrowLeftios, ArrowRightios, ArrowUpward, ArrowDownward, ChevronDown, ChevronLeft, ChevronRight, ChevronUp, Home, LeftArrow, Lock, RightArrow, 
+  Search, Settings, Tick, Verified,  Info, Done, Language, Login, Logout, Schedule, Description, Delete, History, Help } from "./components/icons";
 import Price from "./components/price/Price";
 
 function App() {
@@ -13,7 +14,7 @@ function App() {
     setsnacksbarOpen(true);
 
     setTimeout(() => {
-      // setsnacksbarOpen(false); 
+      setsnacksbarOpen(false); 
     }, 5000);
   };
   return (
@@ -50,13 +51,31 @@ function App() {
       <Button>Click me</Button>
       <LeftArrow height="25" width="25" />
       <RightArrow height="25" width="25"  />
-
+      <ArrowUpward height="25" width="25" />
+      <ArrowDownward height="25" width="25" />
       <ArrowLeftios  height="25" width="25" />
       <ArrowRightios height="25" width="25" />
 
-      <ChevronLeft />
-      <ChevronRight height="25" width="25"/>
+      <ChevronLeft height="25" width="25" />
+      <ChevronRight height="25" width="25" />
       <ChevronDown  height="25" width="25" />
+      <ChevronUp  height="25" width="25" />
+      <Verified height="25" width="25" />
+      <Home height="25" width="25" />
+      <Search height="25" width="25" />
+      <Settings height="25" width="25" />
+      <Lock height="25" width="25" />
+      <Done height="25" width="25" />
+      <Info height="25" width="25" />
+      <Language height="25" width="25" />
+      <Login height="25" width="25" />
+      <Logout height="25" width="25" />
+      <Schedule height="25" width="25" />
+      <Description height="25" width="25" />
+      <Delete  height="25" width="25" />
+      <History  height="25" width="25" />
+      <Help  height="25" width="25" />
+      
 
       {isSnacksbarOpen && (
         <Snacksbar message="Can't send photo. Retry in 5 seconds." />
